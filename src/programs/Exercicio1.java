@@ -12,31 +12,31 @@ public class Exercicio1 {
     public Exercicio1() {
     }
 
-    public void startProgram() {
-        initValues();
-        inputValue();
-        generateEvenNumbers();
-        showNumsEven();
-    }
-
-    private void initValues() {
-        this.numsEven = new ArrayList<>();
-        this.inputN = 0;
-    }
-
-    private void inputValue() {
-        System.out.println("How many even number you need?");
-        Scanner sc = new Scanner(System.in);
-        this.inputN = sc.nextInt();
-    }
-
-    private void generateEvenNumbers() {
-        for (int i = 1; i <= this.inputN;  i++) {
-            if ((i%2) == 0) numsEven.add(i);
+        public void startProgram() {
+            initValues();
+            this.inputN = inputValue();
+            generateEvenNumbers();
+            showNumsEven(this.numsEven);
         }
-    }
 
-    public void showNumsEven() {
-        System.out.println(this.numsEven.toString());
-    }
+        private void initValues() {
+            this.numsEven = new ArrayList<>();
+            this.inputN = 0;
+        }
+
+        private Integer inputValue() {
+            System.out.println("How many even number you need?");
+            Scanner sc = new Scanner(System.in);
+            return sc.nextInt();
+        }
+
+        private void generateEvenNumbers() {
+            for (int i = 1; i <= this.inputN;  i++) {
+                if ((i%2) == 0) numsEven.add(i);
+            }
+        }
+
+        public void showNumsEven(List<Integer> list) {
+            System.out.println(list);
+        }
 }

@@ -1,4 +1,5 @@
 import programs.Exercicio1;
+import programs.Programa1;
 
 import java.util.Scanner;
 
@@ -7,10 +8,32 @@ public class main {
     private static Exercicio1 exercicio1;
 
     public static void main(String[] args) {
-        exercicio1 = new Exercicio1();
-        Scanner sc = new Scanner(System.in);
-        Integer optionProgramRun = inputOptonProgramRun(sc);
-        selectProgramToRun(optionProgramRun);
+
+
+
+        Programa1 programa1 = new Programa1();
+
+        programa1.rodarPrograma1();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//        exercicio1 = new Exercicio1();
+//        Scanner sc = new Scanner(System.in);
+//        Integer optionProgramRun = inputOptonProgramRun(sc);
+//        selectProgramToRun(optionProgramRun);
     }
 
     private static Integer inputOptonProgramRun(Scanner sc) {
