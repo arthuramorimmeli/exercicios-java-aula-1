@@ -5,27 +5,22 @@ import java.util.List;
 
 public class Exercicio1 {
 
-    private Integer quantityNumbersUserNeed;
-    private List<Integer> numsEven;
+    private final List<Integer> numsEven = new ArrayList<>();
 
     public Exercicio1() {
     }
 
     public void runProgram() {
-        initValues();
-        this.quantityNumbersUserNeed = Exercicio2.sendMessageAndgetIntegerValue("Informe quantos numeros pares você precisa: ");
-        generateEvenNumbers();
+        this.numsEven.clear();
+        Integer quantityNumbersUserNeed = 0;
+        quantityNumbersUserNeed = Exercicio2.sendMessageAndgetIntegerValue("Informe quantos numeros pares você precisa: ");
+        generateEvenNumbers(quantityNumbersUserNeed);
         showNumsEven(this.numsEven);
     }
 
-    private void initValues() {
-        this.numsEven = new ArrayList<>();
-        this.quantityNumbersUserNeed = 0;
-    }
-
-    private void generateEvenNumbers() {
+    private void generateEvenNumbers(Integer quantityNumbersUserNeed) {
         for (int i = 1; quantityNumbersUserNeed != this.numsEven.size(); i++) {
-            if ((i % 2) == 0) numsEven.add(i);
+            if ((i % 2) == 0) this.numsEven.add(i);
         }
     }
 

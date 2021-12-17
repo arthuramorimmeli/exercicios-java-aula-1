@@ -1,23 +1,26 @@
 import programs.Exercicio1;
 import programs.Exercicio2;
 import programs.Exercicio3;
+import programs.Exercicio4;
 
 import java.util.Scanner;
 
-public class main {
+public class Main {
 
     private static Exercicio1 exercicio1;
     private static Exercicio2 exercicio2;
     private static Exercicio3 exercicio3;
+    private static Exercicio4 exercicio4;
 
     public static void main(String[] args) {
         exercicio1 = new Exercicio1();
         exercicio2 = new Exercicio2();
         exercicio3 = new Exercicio3();
+        exercicio4 = new Exercicio4();
         runProgram();
     }
 
-    public static void runProgram() {
+    private static void runProgram() {
         Integer optionProgramRun = inputOptonProgramRun();
         selectProgramToRun(optionProgramRun);
     }
@@ -48,6 +51,10 @@ public class main {
                 exercicio3.runProgram();
                 break;
             }
+            case 4: {
+                exercicio4.runProgram();
+                break;
+            }
             case 0: {
                 System.exit(1);
                 break;
@@ -59,5 +66,9 @@ public class main {
         }
 
         runProgram();
+    }
+
+    public static Exercicio3 getExercicio3() {
+        return exercicio3;
     }
 }

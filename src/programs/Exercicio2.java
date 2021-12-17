@@ -8,19 +8,19 @@ public class Exercicio2 {
 
     private Integer quantityNumbers;
     private Integer multipleOf;
-    private List<Integer> multipleList;
+    private List<Integer> multipleList = new ArrayList<>();
 
     public void runProgram() {
         this.initValues();
         this.getUserInputValues();
-        this.multipleList = this.generateMultipleList(this.multipleOf, quantityNumbers);
+        this.multipleList = generateMultipleList(this.multipleOf, quantityNumbers);
         Exercicio1.showNumsEven(this.multipleList);
     }
 
     private void initValues() {
         this.quantityNumbers = 0;
         this.multipleOf = 0;
-        this.multipleList = new ArrayList<>();
+        this.multipleList.clear();
     }
 
     private void getUserInputValues() {

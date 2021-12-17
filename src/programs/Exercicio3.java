@@ -8,14 +8,14 @@ public class Exercicio3 {
     }
 
     private void isPrimeNumber(Integer number) {
-        if (this.checkIfPrimeNumber(number)) {
+        if (checkIfPrimeNumber(number)) {
             System.out.println("Numero primo");
         } else {
             System.out.println("O número não é primo.");
         }
     }
 
-    private boolean checkIfPrimeNumber(Integer number) {
+    public static boolean checkIfPrimeNumber(Integer number) {
         if (number < 2) return false;
         for (int i = 2; i < number; i++) {
             if((number%i) == 0) {
