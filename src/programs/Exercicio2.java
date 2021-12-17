@@ -6,25 +6,25 @@ import java.util.Scanner;
 
 public class Exercicio2 {
 
-    private Integer quantityNumbers;
+    private Integer finalListSize;
     private Integer multipleOf;
     private List<Integer> multipleList = new ArrayList<>();
 
     public void runProgram() {
         this.initValues();
         this.getUserInputValues();
-        this.multipleList = generateMultipleList(this.multipleOf, quantityNumbers);
+        this.multipleList = generateMultipleList(this.multipleOf, finalListSize);
         Exercicio1.showNumsEven(this.multipleList);
     }
 
     private void initValues() {
-        this.quantityNumbers = 0;
+        this.finalListSize = 0;
         this.multipleOf = 0;
         this.multipleList.clear();
     }
 
     private void getUserInputValues() {
-        this.quantityNumbers = sendMessageAndgetIntegerValue("Quantos numeros você precisa?");
+        this.finalListSize = sendMessageAndgetIntegerValue("Quantos numeros você precisa?");
         this.multipleOf = sendMessageAndgetIntegerValue("Eles devem ser multiplos de: ");
     }
 

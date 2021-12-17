@@ -1,7 +1,4 @@
-import programs.Exercicio1;
-import programs.Exercicio2;
-import programs.Exercicio3;
-import programs.Exercicio4;
+import programs.*;
 
 import java.util.Scanner;
 
@@ -11,12 +8,14 @@ public class Main {
     private static Exercicio2 exercicio2;
     private static Exercicio3 exercicio3;
     private static Exercicio4 exercicio4;
+    private static Exercicio5 exercicio5;
 
     public static void main(String[] args) {
         exercicio1 = new Exercicio1();
         exercicio2 = new Exercicio2();
         exercicio3 = new Exercicio3();
         exercicio4 = new Exercicio4();
+        exercicio5 = new Exercicio5();
         runProgram();
     }
 
@@ -53,6 +52,10 @@ public class Main {
             }
             case 4: {
                 exercicio4.runProgram();
+                break;
+            }
+            case 5: {
+                exercicio5.runProgram();
                 break;
             }
             case 0: {

@@ -12,9 +12,9 @@ public class Exercicio1 {
 
     public void runProgram() {
         this.numsEven.clear();
-        Integer quantityNumbersUserNeed = 0;
-        quantityNumbersUserNeed = Exercicio2.sendMessageAndgetIntegerValue("Informe quantos numeros pares você precisa: ");
-        generateEvenNumbers(quantityNumbersUserNeed);
+        Integer finalListSize = 0;
+        finalListSize = Exercicio2.sendMessageAndgetIntegerValue("Informe quantos numeros pares você precisa: ");
+        generateEvenNumbers(finalListSize);
         showNumsEven(this.numsEven);
     }
 
