@@ -24,8 +24,8 @@ public class Exercicio2 {
     }
 
     private void getUserInputValues() {
-        this.quantityNumbers = this.sendMessageAndgetIntegerValue("Quantos numeros você precisa?");
-        this.multipleOf = this.sendMessageAndgetIntegerValue("Eles devem ser multiplos de: ");
+        this.quantityNumbers = sendMessageAndgetIntegerValue("Quantos numeros você precisa?");
+        this.multipleOf = sendMessageAndgetIntegerValue("Eles devem ser multiplos de: ");
     }
 
     private List<Integer> generateMultipleList(Integer multiple, Integer sizeList) {
@@ -36,7 +36,7 @@ public class Exercicio2 {
         return multipleList;
     }
 
-    private Integer sendMessageAndgetIntegerValue(String message) {
+    public static Integer sendMessageAndgetIntegerValue(String message) {
         System.out.println(message);
         Scanner sc = new Scanner(System.in);
         return sc.nextInt();

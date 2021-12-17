@@ -2,11 +2,10 @@ package programs;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Exercicio1 {
 
-    private Integer inputN;
+    private Integer quantityNumbersUserNeed;
     private List<Integer> numsEven;
 
     public Exercicio1() {
@@ -14,29 +13,23 @@ public class Exercicio1 {
 
     public void runProgram() {
         initValues();
-        this.inputN = inputValue();
+        this.quantityNumbersUserNeed = Exercicio2.sendMessageAndgetIntegerValue("Informe quantos numeros pares você precisa: ");
         generateEvenNumbers();
         showNumsEven(this.numsEven);
     }
 
-        private void initValues() {
-            this.numsEven = new ArrayList<>();
-            this.inputN = 0;
-        }
+    private void initValues() {
+        this.numsEven = new ArrayList<>();
+        this.quantityNumbersUserNeed = 0;
+    }
 
-        private Integer inputValue() {
-            System.out.println("Quantos numeros pares você precisa");
-            Scanner sc = new Scanner(System.in);
-            return sc.nextInt();
+    private void generateEvenNumbers() {
+        for (int i = 1; quantityNumbersUserNeed != this.numsEven.size(); i++) {
+            if ((i % 2) == 0) numsEven.add(i);
         }
+    }
 
-        private void generateEvenNumbers() {
-            for (int i = 1; inputN <= this.numsEven.size();  i++) {
-                if ((i%2) == 0) numsEven.add(i);
-            }
-        }
-
-        public static void showNumsEven(List<Integer> list) {
-            System.out.println(list);
-        }
+    public static void showNumsEven(List<Integer> list) {
+        System.out.println(list);
+    }
 }
