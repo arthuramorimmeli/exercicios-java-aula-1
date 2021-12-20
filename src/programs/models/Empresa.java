@@ -1,6 +1,5 @@
 package programs.models;
 
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 
@@ -22,6 +21,11 @@ public class Empresa {
 
     public String getName() {
         return name;
+    }
+
+    public String getValueFormated() {
+        DecimalFormat formato = new DecimalFormat("#.##");
+        return formato.format(this.value);
     }
 
     public Double getValue() {
@@ -53,13 +57,13 @@ public class Empresa {
     }
 
     public Empresa calcNewYearValue() {
-        this.setValue(this.value * (this.getAnnualGrowth()/100));
+        this.setValue(this.value + (this.value * (this.getAnnualGrowth()/100)));
         return this;
     }
 
     @Override
     public String toString() {
-        return  getName() + " - " + getDate() + " - " + getValue() + this.getUnity() +
+        return  getName() + " - " + getDate() + " - " + getValueFormated() + this.getUnity() +
                 ", annualGrowth=" + getAnnualGrowth() +
                 '}';
     }

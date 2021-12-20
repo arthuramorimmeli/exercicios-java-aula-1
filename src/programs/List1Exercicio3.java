@@ -15,7 +15,7 @@ public class List1Exercicio3 {
         }
     }
 
-    public static boolean checkIfPrimeNumber(Integer number) {
+    public static boolean checkIfPrimeNumber(int number) {
         if (number < 2) return false;
         for (int i = 2; i < number; i++) {
             if((number%i) == 0) {

@@ -15,8 +15,10 @@ public class List2Exercicio2 {
 
     public void initValues() {
         LocalDate currentDate = LocalDate.parse("2021-01-01");
-        empresaX = new Empresa("Empresa X", 1130000.0, "m", 148.3, currentDate);
-        empresaY = new Empresa("Empresa Y", 18400000.0, "m", 32.0, currentDate);
+        empresaX = new Empresa("Empresa X", 1.13, "m", 148.3, currentDate);
+        empresaY = new Empresa("Empresa Y", 18.4, "m", 32.0, currentDate);
+        System.out.println(empresaX.toString());
+        System.out.println(empresaY.toString());
         while(empresaY.getValue() > empresaX.getValue()) {
             empresaX.calcNewYearValue().nextYear();
             empresaY.calcNewYearValue().nextYear();
