@@ -3,7 +3,7 @@ package programs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Exercicio5 {
+public class List1Exercicio5 {
 
     private Integer listSize;
     private Integer replyNumber;
@@ -14,13 +14,13 @@ public class Exercicio5 {
         initValues();
         getUserInputValues();
         this.multipleList = generateList();
-        Exercicio1.showNumsEven(this.multipleList);
+        List1Exercicio1.showNumsEven(this.multipleList);
     }
 
     private void getUserInputValues() {
-        listSize = Exercicio2.sendMessageAndgetIntegerValue("Qual o tamanho da lista?");
-        replyNumber = Exercicio2.sendMessageAndgetIntegerValue("Qual numero precisa repetir?");
-        replyQuantity = Exercicio2.sendMessageAndgetIntegerValue("Quantas vezes ele precisa repetir?");
+        listSize = List1Exercicio2.sendMessageAndgetIntegerValue("Qual o tamanho da lista?");
+        replyNumber = List1Exercicio2.sendMessageAndgetIntegerValue("Qual numero precisa repetir?");
+        replyQuantity = List1Exercicio2.sendMessageAndgetIntegerValue("Quantas vezes ele precisa repetir?");
     }
 
     private void initValues() {

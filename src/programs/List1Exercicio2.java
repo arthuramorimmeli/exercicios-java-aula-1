@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Exercicio2 {
+public class List1Exercicio2 {
 
     private Integer finalListSize;
     private Integer multipleOf;
@@ -14,7 +14,7 @@ public class Exercicio2 {
         this.initValues();
         this.getUserInputValues();
         this.multipleList = generateMultipleList(this.multipleOf, finalListSize);
-        Exercicio1.showNumsEven(this.multipleList);
+        List1Exercicio1.showNumsEven(this.multipleList);
     }
 
     private void initValues() {

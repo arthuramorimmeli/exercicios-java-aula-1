@@ -4,19 +4,29 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Exercicio1 exercicio1;
-    private static Exercicio2 exercicio2;
-    private static Exercicio3 exercicio3;
-    private static Exercicio4 exercicio4;
-    private static Exercicio5 exercicio5;
+    private static List1Exercicio1 exercicio1;
+    private static List1Exercicio2 exercicio2;
+    private static List1Exercicio3 exercicio3;
+    private static List1Exercicio4 exercicio4;
+    private static List1Exercicio5 exercicio5;
+    private static List2Exercicio1 list2Exercicio1;
+    private static List2Exercicio2 list2Exercicio2;
+    private static List2Exercicio3 list2Exercicio3;
 
     public static void main(String[] args) {
-        exercicio1 = new Exercicio1();
-        exercicio2 = new Exercicio2();
-        exercicio3 = new Exercicio3();
-        exercicio4 = new Exercicio4();
-        exercicio5 = new Exercicio5();
+        initClass();
         runProgram();
+    }
+
+    private static void initClass() {
+        exercicio1 = new List1Exercicio1();
+        exercicio2 = new List1Exercicio2();
+        exercicio3 = new List1Exercicio3();
+        exercicio4 = new List1Exercicio4();
+        exercicio5 = new List1Exercicio5();
+        list2Exercicio1 = new List2Exercicio1();
+        list2Exercicio2 = new List2Exercicio2();
+        list2Exercicio3 = new List2Exercicio3();
     }
 
     private static void runProgram() {
@@ -27,12 +37,15 @@ public class Main {
     private static Integer inputOptonProgramRun() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Select program to run: \n" +
-                "1. Run Program 1\n" +
-                "2. Run Program 2\n" +
-                "3. Run Program 3\n" +
-                "4. Run Program 4\n" +
-                "5. Run Program 5\n" +
-                "0. Exit");
+                "1. List 1 Program 1\n" +
+                "2. List 1 Program 2\n" +
+                "3. List 1 Program 3\n" +
+                "4. List 1 Program 4\n" +
+                "5. List 1 Program 5\n" +
+                "6. List 2 Program 1\n" +
+                "7. List 2 Program 2\n" +
+                "8. List 2 Program 3\n" +
+                "\n0. Exit");
         return sc.nextInt();
     }
 
@@ -58,6 +71,18 @@ public class Main {
                 exercicio5.runProgram();
                 break;
             }
+            case 6: {
+                list2Exercicio1.runProgram();
+                break;
+            }
+            case 7: {
+                list2Exercicio2.runProgram();
+                break;
+            }
+            case 8: {
+                list2Exercicio3.runProgram();
+                break;
+            }
             case 0: {
                 System.exit(1);
                 break;
@@ -71,7 +96,7 @@ public class Main {
         runProgram();
     }
 
-    public static Exercicio3 getExercicio3() {
+    public static List1Exercicio3 getExercicio3() {
         return exercicio3;
     }
 }

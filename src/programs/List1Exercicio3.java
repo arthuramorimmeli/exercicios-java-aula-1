@@ -1,9 +1,9 @@
 package programs;
 
-public class Exercicio3 {
+public class List1Exercicio3 {
 
     public void runProgram() {
-        Integer numForCheck = Exercicio2.sendMessageAndgetIntegerValue("Digite o numero para verificar se é primo: ");
+        Integer numForCheck = List1Exercicio2.sendMessageAndgetIntegerValue("Digite o numero para verificar se é primo: ");
         isPrimeNumber(numForCheck);
     }
 

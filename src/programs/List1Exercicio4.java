@@ -3,7 +3,7 @@ package programs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Exercicio4 {
+public class List1Exercicio4 {
 
     private Integer maxNumberPrime;
     private final List<Integer> multipleList = new ArrayList<>();
@@ -12,7 +12,7 @@ public class Exercicio4 {
         initValues();
         getUserInputValues();
         generatePrimeNumberList();
-        Exercicio1.showNumsEven(multipleList);
+        List1Exercicio1.showNumsEven(multipleList);
     }
 
     private void initValues() {
@@ -21,12 +21,12 @@ public class Exercicio4 {
     }
 
     private void getUserInputValues() {
-       this.maxNumberPrime = Exercicio2.sendMessageAndgetIntegerValue("Qual é o valor maximo?");
+       this.maxNumberPrime = List1Exercicio2.sendMessageAndgetIntegerValue("Qual é o valor maximo?");
     }
 
     private void generatePrimeNumberList() {
         for (int i = 0; maxNumberPrime != multipleList.size(); i++) {
-            if (Exercicio3.checkIfPrimeNumber(i)) {
+            if (List1Exercicio3.checkIfPrimeNumber(i)) {
                 multipleList.add(i);
             }
         }
